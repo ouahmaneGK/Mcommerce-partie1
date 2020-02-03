@@ -108,7 +108,7 @@ public class ProductController {
     }
 
     @ApiOperation(value = "Récupère un HashMap qui a pour clé les produits et pour valeur la marge du prix correspondante à chaque produit")
-    @GetMapping("/Produits/AdminProduits")
+    @GetMapping("/AdminProduits")
     public HashMap <Product, Integer>   calculerMargeProduit(){
         HashMap <Product, Integer> listMargeProduit= new HashMap<>();
         productDao.findAll().forEach( product->{
